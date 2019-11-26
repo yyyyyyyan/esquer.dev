@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>esquer.dev</title>
+</head>
+<body>
+    {% load markdown %}
+    {% for post in posts %}
+        <h1>{{ post.pub_date }}</h1>
+        <h2>{{ post.slug }}</h2>
+        {{ post.markdown|markdown|safe }}
+    {% endfor %}
+</body>
+</html>
