@@ -2,14 +2,25 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    {% load static %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Quantico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static "esquerdev.css" %}">
     <title>esquer.dev</title>
 </head>
 <body>
-    {% load markdown %}
-    {% for post in posts %}
-        <h1>{{ post.pub_date }}</h1>
-        <h2>{{ post.slug }}</h2>
-        {{ post.markdown|markdown|safe }}
-    {% endfor %}
+    <nav class="navbar navbar-expand-lg esquerdev-navbar">
+        <a href="" class="navbar-brand esquerdev-brand mx-auto">
+            <img src="{% static "transparent-logo.png" %}" alt="esquer.dev logo" width="150" height="150">
+            esquer.dev
+        </a>
+    </nav>
+    <div class="container">
+        {% load markdown %}
+        {% for post in posts %}
+            <h1>{{ post.title }}</h1>
+            {{ post.markdown|markdown|safe }}
+        {% endfor %}
+    </div>
 </body>
 </html>

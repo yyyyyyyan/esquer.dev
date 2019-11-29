@@ -2,11 +2,13 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+
     <title>{{ post.title }}</title>
 </head>
 <body>
-    <h1>{{ post.pub_date }}</h1>
-    {% load markdown %}
-    {{ post.markdown|markdown|safe }}
+    <article>
+        {% load markdown %}
+        {{ post.markdown|markdown|safe }}
+    </article>
 </body>
 </html>
