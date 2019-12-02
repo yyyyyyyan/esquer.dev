@@ -1,11 +1,28 @@
 .esquerdev-navbar {
     background-color: #071013;
     margin-bottom: 2%;
-    height: 150px;
 }
 
-.esquerdev-brand {
+.esquerdev-brand, .esquerdev-brand:hover {
     color: #d3a121;
     font-family: 'Quantico', sans-serif;
-    font-size: xx-large;
+    font-size: 200%;
+}
+
+.esquerdev-nav-item {
+    color: #d3a121;
+    font-family: 'Quantico', sans-serif;
+    font-size: 150%;
+}
+
+.esquerdev-nav-item:hover {
+    border-bottom: 1px solid;
+}
+
+.esquerdev-active, .esquerdev-nav-item:hover {
+    color: #B21313;
+}
+
+.red {
+    color: #E61919
 }

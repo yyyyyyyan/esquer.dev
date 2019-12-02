@@ -3,19 +3,31 @@
 <head>
     <meta charset="UTF-8">
     {% load static %}
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static "favicon/apple-touch-icon.png" %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static "favicon/favicon-32x32.png" %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static "favicon/favicon-16x16.png" %}">
+    <link rel="manifest" href="{% static "favicon/site.webmanifest" %}">
+    <link rel="shortcut icon" href="{% static "favicon/favicon.ico" %}">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="{% static "favicon/browserconfig.xml" %}">
+    <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css?family=Quantico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quantico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static "esquerdev.css" %}">
     <title>esquer.dev</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg esquerdev-navbar">
-        <a href="" class="navbar-brand esquerdev-brand mx-auto">
-            <img src="{% static "transparent-logo.png" %}" alt="esquer.dev logo" width="150" height="150">
-            esquer.dev
+        <a href="{% url "index" %}" class="navbar-brand esquerdev-brand mx-auto">
+            <img src="{% static "transparent-logo.png" %}" alt="esquer.dev logo" width="70" height="70">
+            <span class="red">esquer.</span>dev
         </a>
+        <div class="navbar-nav mr-5">
+            <a href="#" class="nav-item nav-link esquerdev-nav-item esquerdev-active">Posts</a>
+            <a href="#" class="nav-item nav-link esquerdev-nav-item">Sobre</a>
+        </div>
     </nav>
-    <div class="container">
+    <div class="container border">
         {% load markdown %}
         {% for post in posts %}
             <h1>{{ post.title }}</h1>
