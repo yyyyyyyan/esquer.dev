@@ -1,28 +1,55 @@
 .esquerdev-navbar {
     background-color: #071013;
     margin-bottom: 2%;
+    opacity: 0.98;
 }
 
-.esquerdev-brand, .esquerdev-brand:hover {
+.esquerdev-brand {
     color: #d3a121;
     font-family: 'Quantico', sans-serif;
     font-size: 200%;
+    transition: color 0.3s;
+}
+
+.esquer {
+    color: #E61919;
+    transition: color 0.3s;
+}
+
+.esquerdev-brand:hover {
+    color: #E61919;
+}
+
+.esquerdev-brand:hover .esquer {
+color: #d3a121;
 }
 
 .esquerdev-nav-item {
-    color: #d3a121;
-    font-family: 'Quantico', sans-serif;
-    font-size: 150%;
+color: #d3a121;
+font-family: 'Quantico', sans-serif;
+font-size: 150%;
+border-bottom: 1px solid transparent;
+transition: border-bottom 0.4s;
 }
 
 .esquerdev-nav-item:hover {
-    border-bottom: 1px solid;
+border-bottom: 1px solid #B21313;
 }
 
 .esquerdev-active, .esquerdev-nav-item:hover {
-    color: #B21313;
+color: #B21313;
 }
 
-.red {
-    color: #E61919
+.nav-external-svg {
+    fill: #B21313;
+    transition: fill 0.2s;
+}
+
+.nav-external-svg:hover {
+    fill: #00ACED;
+}
+
+.border {
+    padding: 10px;
+    margin-bottom: 10px;
 }
