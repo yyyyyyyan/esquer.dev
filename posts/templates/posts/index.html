@@ -1,6 +1,7 @@
-{% extends "posts/layout.html" %}
+{% extends "layout.html" %}
 
 {% block title %}Posts{% endblock %}
+
 {% block content %}
     {% load markdown %}
     {% for post in posts %}
