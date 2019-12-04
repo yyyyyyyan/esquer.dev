@@ -21,35 +21,58 @@
 }
 
 .esquerdev-brand:hover .esquer {
-color: #d3a121;
+    color: #d3a121;
 }
 
 .esquerdev-nav-item {
-color: #d3a121;
-font-family: 'Quantico', sans-serif;
-font-size: 150%;
-border-bottom: 1px solid transparent;
-transition: border-bottom 0.4s;
+    color: #d3a121;
+    font-family: 'Quantico', sans-serif;
+    font-size: 150%;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.4s;
 }
 
 .esquerdev-nav-item:hover {
-border-bottom: 1px solid #B21313;
+    border-bottom: 1px solid #B21313;
 }
 
 .esquerdev-active, .esquerdev-nav-item:hover {
-color: #B21313;
+    color: #B21313;
 }
 
 .nav-external-svg {
+    padding: 5px;
+    margin-right: 30px;
     fill: #B21313;
     transition: fill 0.2s;
 }
 
-.nav-external-svg:hover {
+.twitter-svg:hover {
     fill: #00ACED;
+}
+
+.github-svg:hover {
+    fill: #000000;
 }
 
 .border {
     padding: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+small {
+    color: #808080;
+}
+
+.footer-link {
+    color: #808080;
+}
+
+.content {
+    margin-bottom: 50px;
+}
+
+footer {
+    background-color: #FFFFFF;
+    border-top: 1px solid rgba(199,199,199,0.67);
 }
