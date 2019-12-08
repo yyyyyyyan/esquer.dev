@@ -2,6 +2,10 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="{% block description %}Um blog de tecnologia e política à esquerda{% endblock %}">
+    <meta name="keywords" content="{% block keywords %}Privacidade,Criptografia,Hacking,Comunismo,Tecnologia,Segurança{% endblock %}">
+    <meta name="author" content="{% block author %}esquer.dev{% endblock %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% load static %}
     <link rel="apple-touch-icon" sizes="180x180" href="{% static "favicon/apple-touch-icon.png" %}">
     <link rel="icon" type="image/png" sizes="32x32" href="{% static "favicon/favicon-32x32.png" %}">
@@ -12,7 +16,7 @@
     <meta name="msapplication-config" content="{% static "favicon/browserconfig.xml" %}">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Quantico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans|Quantico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static "esquerdev.css" %}">
     <title>{% block title %}Home{% endblock %} | esquer.dev</title>
 </head>
@@ -20,12 +24,12 @@
     <nav class="navbar sticky-top navbar-expand-lg esquerdev-navbar">
         <div class="container">
             <a href="{% url "index" %}" class="navbar-brand esquerdev-brand mx-auto">
-            <img src="{% static "transparent-logo.png" %}" alt="esquer.dev logo" width="70" height="70">
+            <img src="{% static "transparent-logo.png" %}" alt="esquer.dev logo" class="logo">
             <span class="esquer">esquer.</span>dev
             </a>
-            <div class="navbar-nav mr-5">
-                <a href="#" class="nav-item nav-link esquerdev-nav-item esquerdev-active">Posts</a>
-                <a href="#" class="nav-item nav-link esquerdev-nav-item">Sobre</a>
+            <div class="navbar-nav mr-5 nav-pages">
+                <a href="{% url "index" %}" class="nav-item nav-link esquerdev-nav-item esquerdev-active">Posts</a>
+                <a href="{% url "about" %}" class="nav-item nav-link esquerdev-nav-item">Sobre</a>
                 <a href="{% url "contact" %}" class="nav-item nav-link esquerdev-nav-item">Contato</a>
             </div>
         </div>
