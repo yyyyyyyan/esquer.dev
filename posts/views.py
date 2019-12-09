@@ -13,5 +13,3 @@ class PostList(ListView):
     context_object_name = 'posts'
     model = Post
     ordering = ['-pub_date']
-
-# TODO: ADICIONAR READTIME

@@ -1,1 +1,17 @@
-<!-- TODO: post pagina -->
+{% extends "layout.html" %}
+
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block content %}
+    <div class="post-div">
+        <div class="post-headers">
+            <small class="post-info">{{ post.pub_date|date:"d M, Y"}} &bull; Leitura de {{ post.readtime }} min</small>
+            <h1 class="post-title">{{ post.title }}</h1>
+            <p class="post-description">{{ post.description }}</p>
+        </div>
+        <div class="post-body">
+            {% load markdown %}
+            {{ post.markdown|markdown|safe }}
+        </div>
+    </div>
+{% endblock %}

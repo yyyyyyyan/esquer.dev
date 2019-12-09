@@ -37,7 +37,7 @@
 }
 
 .esquerdev-active, .esquerdev-nav-item:hover {
-    color: #B21313;
+    color: #E61919;
 }
 
 .nav-external-svg {
@@ -86,6 +86,10 @@ footer {
     font-size: 40px;
 }
 
+.post-info {
+    font-size: 13px;
+}
+
 @media (min-width: 600px) {
     .content {
         width: 40%;
@@ -97,7 +101,7 @@ footer {
     }
 
     .post-div {
-        font-size: 21px;
+        font-size: 19px;
     }
 }
 
@@ -112,12 +116,13 @@ footer {
     }
 
     .post-div {
-        font-size: 18px;
+        font-size: 17px;
     }
 }
 
 /*
 TODO: descricao 24px
-TODO: h2 34px/30px
+TODO: codigo
+TODO: posts no index
 */
 

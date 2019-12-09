@@ -1,4 +1,5 @@
 from django.db import models
+import readtime
 
 
 class Post(models.Model):
@@ -8,13 +9,8 @@ class Post(models.Model):
     keywords = models.CharField(max_length=255)
     pub_date = models.DateTimeField()
     slug = models.SlugField()
-    author = models.ForeignKey('Author', null=True, on_delete=models.SET_NULL)
+    readtime = models.PositiveSmallIntegerField(editable=False)
 
-
-class Author(models.Model):
-    name = models.CharField(max_length=255)
-    email = models.EmailField()
-    url = models.URLField()
-
-    def __str__(self):
-        return self.name
+    def save(self, *args, **kwargs):
+        self.readtime = readtime.of_markdown(self.markdown).minutes
+        super(Post, self).save(*args, **kwargs)
