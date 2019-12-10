@@ -10,7 +10,9 @@ class Post(models.Model):
     pub_date = models.DateTimeField()
     slug = models.SlugField()
     readtime = models.PositiveSmallIntegerField(editable=False)
+    has_code = models.BooleanField(editable=False)
 
     def save(self, *args, **kwargs):
         self.readtime = readtime.of_markdown(self.markdown).minutes
+        self.has_code = True if "```" in self.markdown else False
         super(Post, self).save(*args, **kwargs)

@@ -81,13 +81,35 @@ footer {
     font-family: 'Open Sans', sans-serif;
 }
 
+.post-headers {
+    margin-bottom: 50px;
+}
+
 .post-title {
     font-family: 'Merriweather', serif;
     font-size: 40px;
 }
 
+.post-description {
+    font-size: 24px;
+    color: #808080;
+}
+
 .post-info {
     font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.post-keywords {
+    margin-top: 25px;
+    font-size: 15px;
+    color: rgba(0,0,0,0.75)
+}
+
+.post-div h2 {
+    margin-top: 50px;
+    font-size: 30px;
+    font-weight: bold;
 }
 
 @media (min-width: 600px) {
@@ -121,8 +143,6 @@ footer {
 }
 
 /*
-TODO: descricao 24px
-TODO: codigo
 TODO: posts no index
 */
 
