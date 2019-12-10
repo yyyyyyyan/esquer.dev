@@ -19,7 +19,12 @@
             <p class="post-description">{{ post.description }}</p>
             <div class="post-keywords">
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 32 32" style=" fill:#000000;"><path d="M 2 8 L 2 24 L 23.0625 24 L 23.34375 23.65625 L 29.90625 16 L 23.34375 8.34375 L 23.0625 8 Z M 4 10 L 22.125 10 L 27.28125 16 L 22.125 22 L 4 22 Z M 23 15 C 22.449219 15 22 15.449219 22 16 C 22 16.550781 22.449219 17 23 17 C 23.550781 17 24 16.550781 24 16 C 24 15.449219 23.550781 15 23 15 Z"></path></svg>
-                <span>{{ post.keywords }}</span>
+                <span>
+                    {% for keyword in post.keywords %}
+                        <a href="{% url "search_keyword" keyword %}">{{ keyword }}</a><!--
+                        -->{% if not forloop.last %},{% endif %}
+                    {% endfor %}
+                </span>
             </div>
         </div>
         <div class="post-body">
@@ -28,7 +33,3 @@
         </div>
     </div>
 {% endblock %}
-
-{% comment %}
-TODO: linkar cada keyword a uma pagina de pesquisa
-{% endcomment %}

@@ -29,7 +29,7 @@
             <span class="esquer">esquer.</span>dev
             </a>
             <div class="navbar-nav mr-5 nav-pages">
-                <a href="{% url "index" %}" class="nav-item nav-link esquerdev-nav-item esquerdev-active">Posts</a>
+                <a href="{% url "post_list" %}" class="nav-item nav-link esquerdev-nav-item esquerdev-active">Posts</a>
                 <a href="{% url "about" %}" class="nav-item nav-link esquerdev-nav-item">Sobre</a>
                 <a href="{% url "contact" %}" class="nav-item nav-link esquerdev-nav-item">Contato</a>
             </div>
@@ -57,3 +57,7 @@
     </footer>
 </body>
 </html>
+
+{% comment %}
+TODO: highlight vermelinho pra página ativa
+{% endcomment %}

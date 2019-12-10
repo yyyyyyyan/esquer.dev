@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}Posts{% endblock %}
+
+{% block content %}
+    {% load markdown %}
+    {% for post in posts %}
+        <a href="{% url "post_detail" post.slug %}">sdsd</a>
+        <div class="border">
+            <h1>{{ post.title }}</h1>
+            {{ post.markdown|markdown|safe }}
+        </div>
+    {% endfor %}
+{% endblock %}

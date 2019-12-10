@@ -14,9 +14,15 @@ class PostDetail(DetailView):
 
 
 class PostList(ListView):
-    template_name = 'posts/index.html'
+    template_name = 'posts/post-list.html'
     context_object_name = 'posts'
     model = Post
-    ordering = ['-pub_date']
+    ordering = '-pub_date'
+
+
+class PostListByTag(PostList):
+    def get_queryset(self):
+        queryset = self.model.objects.filter(keywords__icontains=self.kwargs['keyword']).order_by(self.ordering)
+        return queryset
 
 # TODO: paginação
