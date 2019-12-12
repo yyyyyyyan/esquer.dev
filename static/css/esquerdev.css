@@ -21,11 +21,11 @@
 }
 
 .esquerdev-brand:hover .esquer {
-    color: #d3a121;
+    color: #D3A121;
 }
 
 .esquerdev-nav-item {
-    color: #d3a121;
+    color: #D3A121;
     font-family: 'Quantico', sans-serif;
     font-size: 150%;
     border-bottom: 1px solid transparent;
@@ -36,7 +36,7 @@
     border-bottom: 1px solid #B21313;
 }
 
-.esquerdev-active, .esquerdev-nav-item:hover {
+.esquerdev-nav-item-active, .esquerdev-nav-item:hover {
     color: #E61919;
 }
 
@@ -90,6 +90,12 @@ footer {
     font-size: 40px;
 }
 
+.post-list-title {
+    font-family: 'Merriweather', serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+
 .post-description {
     font-size: 24px;
     color: #808080;
@@ -106,10 +112,31 @@ footer {
     color: rgba(0,0,0,0.75)
 }
 
-.post-div h2 {
+.post-headers a {
+    color: #B21313;
+}
+
+.post-body h2 {
     margin-top: 50px;
     font-size: 30px;
     font-weight: bold;
+}
+
+.post-body a{
+    color: #B21313;
+    font-weight: bold;
+    border-bottom: 1px solid;
+}
+
+.post-body a:hover {
+    color: blue;
+    text-decoration: none;
+}
+
+.tag-title {
+    font-family: 'Quantico', sans-serif;
+    font-size: 46px;
+    color: #B21313;
 }
 
 @media (min-width: 600px) {

@@ -1,14 +1,24 @@
 {% extends "layout.html" %}
 
-{% block title %}Posts{% endblock %}
+{% block title %}
+    Posts
+    {% if keyword %} - {{ keyword|capfirst }}{% endif %}
+{% endblock %}
 
 {% block content %}
+    {% if keyword %}
+        <h1 class="tag-title">#{{ keyword|capfirst }}</h1>
+    {% endif %}
     {% load markdown %}
     {% for post in posts %}
-        <a href="{% url "post_detail" post.slug %}">sdsd</a>
+        <!-- TODO: ajeitar estilo do link -->
+        <!-- TODO: adicionar post info -->
+        <!-- TODO: ajeitar estilo da descrição -->
+        <a href="{% url "post_detail" post.slug %}">
         <div class="border">
-            <h1>{{ post.title }}</h1>
-            {{ post.markdown|markdown|safe }}
+            <h1 class="post-list-title">{{ post.title }}</h1>
+            {{ post.description }}
         </div>
+        </a>
     {% endfor %}
 {% endblock %}
