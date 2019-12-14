@@ -1,5 +1,10 @@
 {% extends "layout.html" %}
 
+{% block extendable_header %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static "css/post-list.css" %}">
+{% endblock %}
+
 {% block title %}
     Posts
     {% if keyword %} - {{ keyword|capfirst }}{% endif %}
@@ -14,10 +19,11 @@
         <!-- TODO: ajeitar estilo do link -->
         <!-- TODO: adicionar post info -->
         <!-- TODO: ajeitar estilo da descrição -->
-        <a href="{% url "post_detail" post.slug %}">
-        <div class="border">
-            <h1 class="post-list-title">{{ post.title }}</h1>
-            {{ post.description }}
+        <a href="{% url "post_detail" post.slug %}" class="post-link">
+        <div class="post-div">
+            <small class="post-info">{{ post.pub_date|date}} &bull; Leitura de {{ post.readtime }} min</small>
+            <h1 class="post-title">{{ post.title }}</h1>
+            <p class="post-description">{{ post.description }}</p>
         </div>
         </a>
     {% endfor %}

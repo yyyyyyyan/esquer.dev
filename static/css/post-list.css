@@ -1,0 +1,35 @@
+.post-link, .post-link:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.post-link:hover .post-div {
+    border: 1px solid #E61919;
+}
+
+.post-div {
+    font-family: 'Open Sans', sans-serif;
+    padding: 30px;
+    margin-bottom: 25px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
+    transition: border 0.4s;
+}
+
+.post-info {
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.post-title {
+    font-family: 'Merriweather', serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.post-description {
+    color: #808080;
+}
+
+/* TODO: separar direito o CSS */

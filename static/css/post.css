@@ -1,0 +1,49 @@
+.post-div {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.post-headers {
+    margin-bottom: 50px;
+}
+
+.post-title {
+    font-family: 'Merriweather', serif;
+    font-size: 40px;
+}
+
+.post-description {
+    font-size: 21px;
+    color: #808080;
+}
+
+.post-info {
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.post-keywords {
+    margin-top: 25px;
+    font-size: 15px;
+    color: rgba(0,0,0,0.75)
+}
+
+.post-headers a {
+    color: #B21313;
+}
+
+.post-body h2 {
+    margin-top: 50px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.post-body a{
+    color: #B21313;
+    font-weight: bold;
+    border-bottom: 1px solid;
+}
+
+.post-body a:hover {
+    color: blue;
+    text-decoration: none;
+}
