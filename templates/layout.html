@@ -37,15 +37,21 @@
     </nav>
     <div class="container content">
         {% block content %}{% endblock %}
+        <small>
         <p class="text-center">
-            <small>
+
                 &copy; Copyright {% now "Y" %}, esquer.dev
                 &bull;
                 <a href="{% url "privacy" %}" class="footer-link">Política de Privacidade</a>
                 &bull;
                 <a href="{% url "terms" %}" class="footer-link">Termos de Uso</a>
-            </small>
         </p>
+        <p class="text-center">
+            Até hoje (15/12/2019), não recebemos nenhum mandado ou processo judicial.
+            <br>
+            Este aviso é atualizado semanalmente de forma manual. Fique atento.
+        </p>
+        </small>
     </div>
     <footer class="fixed-bottom">
         <div class="text-center">
