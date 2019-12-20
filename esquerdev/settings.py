@@ -108,3 +108,6 @@ STATIC_URL = '/static/'
 from .local_settings import *
 
 # TODO: Work on SEO
+# TODO: transurl
+# TODO: change url of admin
+# TODO: canary telegram bot to change date

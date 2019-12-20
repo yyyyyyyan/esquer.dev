@@ -48,6 +48,14 @@
     text-decoration: none;
 }
 
+blockquote {
+    border-left: 4px solid #B21313;
+    padding: 10px;
+    margin-top: 45px;
+    margin-bottom: 45px;
+    font-size: 120%;
+}
+
 .share-buttons {
     float: right;
 }
