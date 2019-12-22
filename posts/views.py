@@ -8,9 +8,9 @@ class PostDetail(DetailView):
     model = Post
 
     def get_object(self, *args, **kwargs):
-        object = super(PostDetail, self).get_object(*args, **kwargs)
-        object.keywords = object.keywords.split(',')
-        return object
+        post_object = super(PostDetail, self).get_object(*args, **kwargs)
+        post_object.list_keywords = post_object.keywords.split(',')
+        return post_object
 
 
 class PostList(ListView):
@@ -18,6 +18,7 @@ class PostList(ListView):
     context_object_name = 'posts'
     model = Post
     ordering = '-pub_date'
+    paginate_by = 1
 
 
 class PostListByTag(PostList):

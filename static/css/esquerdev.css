@@ -72,20 +72,12 @@ footer {
     border-top: 1px solid rgba(199,199,199,0.67);
 }
 
-
-
-.tag-title {
-    font-family: 'Quantico', sans-serif;
-    font-size: 46px;
-    color: #B21313;
-}
-
 @media (min-width: 600px) {
     .content {
         width: 40%;
     }
 
-    .logo {
+    #nav-logo {
         width: 70px;
         height: 70px;
     }
@@ -100,7 +92,7 @@ footer {
         display: none;
     }
 
-    .logo {
+    #nav-logo {
         width: 50px;
         height: 50px;
     }

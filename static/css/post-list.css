@@ -33,6 +33,12 @@
     color: #808080;
 }
 
+.tag-title {
+    font-family: 'Quantico', sans-serif;
+    font-size: 46px;
+    color: #B21313;
+}
+
 /*
 TODO: separar direito o CSS
 */
