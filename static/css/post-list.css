@@ -39,6 +39,15 @@
     color: #B21313;
 }
 
+.post-pagination {
+    display: inline-block;
+    width: 100%;
+}
+
+.next-page {
+    float: right;
+}
+
 /*
 TODO: separar direito o CSS
 */

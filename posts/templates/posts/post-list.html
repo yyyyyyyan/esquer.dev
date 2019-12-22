@@ -16,9 +16,7 @@
     {% endif %}
     {% load markdown %}
     {% for post in posts %}
-        <!-- TODO: ajeitar estilo do link -->
-        <!-- TODO: adicionar post info -->
-        <!-- TODO: ajeitar estilo da descrição -->
+        <!-- TODO: adicionar keywords -->
         <a href="{% url "post_detail" post.slug %}" class="post-link">
         <div class="post-div">
             <small class="post-info">{{ post.pub_date|date}} &bull; Leitura de {{ post.readtime }} min</small>
@@ -27,4 +25,12 @@
         </div>
         </a>
     {% endfor %}
+    <div class="post-pagination">
+        {% if page_obj.has_previous %}
+            <a href="?page={{ page_obj.previous_page_number }}" class="btn btn-dark">Página Anterior</a>
+        {% endif %}
+        {% if page_obj.has_next %}
+            <a class="btn btn-dark next-page" href="?page={{ page_obj.next_page_number }}">Próxima Página</a>
+        {% endif %}
+    </div>
 {% endblock %}

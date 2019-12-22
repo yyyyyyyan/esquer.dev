@@ -18,7 +18,7 @@ class PostList(ListView):
     context_object_name = 'posts'
     model = Post
     ordering = '-pub_date'
-    paginate_by = 1
+    paginate_by = 7
 
 
 class PostListByTag(PostList):

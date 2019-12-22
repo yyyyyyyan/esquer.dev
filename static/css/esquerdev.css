@@ -67,6 +67,10 @@ small {
     margin-bottom: 50px;
 }
 
+.small-footer {
+    margin-top: 25px;
+}
+
 footer {
     background-color: #FFFFFF;
     border-top: 1px solid rgba(199,199,199,0.67);
