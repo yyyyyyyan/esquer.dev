@@ -30,5 +30,3 @@ class PostListByTag(PostList):
         context = super(PostListByTag, self).get_context_data(*args, **kwargs)
         context['keyword'] = self.kwargs['keyword']
         return context
-
-# TODO: paginação
