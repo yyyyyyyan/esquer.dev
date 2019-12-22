@@ -48,6 +48,10 @@
     text-decoration: none;
 }
 
+.post-body p img {
+    width: 100%;
+}
+
 blockquote {
     border-left: 4px solid #B21313;
     padding: 10px;
