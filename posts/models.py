@@ -14,5 +14,5 @@ class Post(models.Model):
 
     def save(self, *args, **kwargs):
         self.readtime = readtime.of_markdown(self.markdown).minutes
-        self.has_code = True if "```" in self.markdown else False
+        self.has_code = "```" in self.markdown
         super(Post, self).save(*args, **kwargs)
