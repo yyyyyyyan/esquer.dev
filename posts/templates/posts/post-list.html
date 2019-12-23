@@ -16,7 +16,6 @@
     {% endif %}
     {% load markdown %}
     {% for post in posts %}
-        <!-- TODO: adicionar keywords -->
         <a href="{% url "post_detail" post.slug %}" class="post-link">
         <div class="post-div">
             <small class="post-info">{{ post.pub_date|date}} &bull; Leitura de {{ post.readtime }} min</small>

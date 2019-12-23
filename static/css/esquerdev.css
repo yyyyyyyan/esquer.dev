@@ -41,8 +41,7 @@
 }
 
 .nav-external-svg {
-    padding: 5px;
-    margin-right: 30px;
+    margin-right: 20px;
     fill: #B21313;
     transition: fill 0.2s;
 }
@@ -74,6 +73,7 @@ small {
 footer {
     background-color: #FFFFFF;
     border-top: 1px solid rgba(199,199,199,0.67);
+    padding: 3px;
 }
 
 @media (min-width: 600px) {
