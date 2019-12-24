@@ -58,8 +58,13 @@ blockquote {
     margin-top: 45px;
     margin-bottom: 45px;
     font-size: 120%;
+    font-style: italic;
 }
 
-.share-buttons {
-    float: right;
+.share-buttons-color {
+    transition: fill 0.2s;
+}
+
+.share-button:hover .share-buttons-color{
+    fill: #B21313;
 }
