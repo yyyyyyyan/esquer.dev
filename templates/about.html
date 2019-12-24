@@ -1,7 +1,14 @@
 {% extends "layout.html" %}
 
+{% block extendable_header %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static "css/about.css" %}">
+{% endblock %}
+
 {% block title %}Sobre{% endblock %}
 
 {% block content %}
-    <!-- TODO: sobre -->
+    <h1 class="tag-title text-center">Sobre</h1>
+    {% load static %}
+    <img src="{% static "logo.png" %}" alt="esquer.dev logo" class="logo">
 {% endblock %}
