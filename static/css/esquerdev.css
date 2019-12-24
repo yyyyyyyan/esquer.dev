@@ -6,9 +6,13 @@
 
 .esquerdev-brand {
     color: #d3a121;
-    font-family: 'Quantico', sans-serif;
+    font-family: 'Logo Font', sans-serif;
     font-size: 200%;
     transition: color 0.3s;
+}
+
+.written-logo {
+    margin-top: 7px;
 }
 
 .esquer {

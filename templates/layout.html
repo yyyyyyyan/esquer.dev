@@ -16,6 +16,7 @@
     <meta name="msapplication-config" content="{% static "favicon/browserconfig.xml" %}">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/logo-font/stylesheet.css" %}">
     <link href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans|Quantico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static "css/esquerdev.css" %}">
     {% block extendable_header %}{% endblock %}
@@ -24,9 +25,9 @@
 <body>
     <nav class="navbar sticky-top navbar-expand-lg esquerdev-navbar">
         <div class="container">
-            <a href="{% url "index" %}" class="navbar-brand esquerdev-brand mx-auto">
-            <img src="{% static "transparent-logo.png" %}" alt="esquer.dev logo" id="nav-logo">
-            <span class="esquer">esquer.</span>dev
+            <a href="{% url "index" %}" class="navbar-brand esquerdev-brand mx-auto" style="display: flex; align-items: center">
+            <img style="margin-right: 20px" src="{% static "transparent-logo.png" %}" alt="esquer.dev logo" id="nav-logo">
+                <span class="esquer written-logo">esquer.</span><span class="written-logo">dev</span>
             </a>
             <div class="navbar-nav mr-5 nav-pages">
                 <a href="{% url "post_list" %}" class="nav-item nav-link esquerdev-nav-item {% if request.path == "/posts" %}esquerdev-nav-item-active{% endif %}">Posts</a>
