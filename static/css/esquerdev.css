@@ -5,10 +5,16 @@
 }
 
 .esquerdev-brand {
+    display: flex;
+    align-items: center;
     color: #d3a121;
     font-family: 'Logo Font', sans-serif;
     font-size: 200%;
     transition: color 0.3s;
+}
+
+#nav-logo {
+    margin-right: 20px;
 }
 
 .written-logo {
