@@ -90,6 +90,16 @@ footer {
     padding: 3px;
 }
 
+.mobile-nav {
+    font-family: 'Quantico', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.mobile-nav a {
+    color: #B21313;
+}
+
 @media (min-width: 600px) {
     .content {
         width: 40%;
@@ -102,6 +112,10 @@ footer {
 
     .post-div {
         font-size: 19px;
+    }
+
+    .mobile-nav {
+        display: none;
     }
 }
 
