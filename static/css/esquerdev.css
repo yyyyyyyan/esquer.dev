@@ -56,12 +56,16 @@
     transition: fill 0.2s;
 }
 
-.twitter-svg:hover {
+.twitter-link:hover .twitter-svg {
     fill: #03A9F4;
 }
 
-.github-svg:hover {
+.github-link:hover .github-svg {
     fill: #000000;
+}
+
+.onion-link:hover .onion-svg {
+    fill: #7d4698;
 }
 
 small {
