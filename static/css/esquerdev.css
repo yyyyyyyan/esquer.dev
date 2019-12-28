@@ -110,10 +110,6 @@ footer {
         height: 70px;
     }
 
-    .post-div {
-        font-size: 19px;
-    }
-
     .mobile-nav {
         display: none;
     }
@@ -127,9 +123,5 @@ footer {
     #nav-logo {
         width: 50px;
         height: 50px;
-    }
-
-    .post-div {
-        font-size: 17px;
     }
 }

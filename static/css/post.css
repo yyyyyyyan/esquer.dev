@@ -2,6 +2,18 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+@media (min-width: 600px) {
+    .post-div {
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 600px) {
+    .post-div {
+        font-size: 17px;
+    }
+}
+
 .post-headers {
     margin-bottom: 50px;
 }
@@ -49,11 +61,12 @@
     text-decoration: none;
 }
 
-.post-body p img {
-    width: 100%;
+.post-body img {
+    max-width: 100%;
+    height: auto;
 }
 
-blockquote {
+.post-body blockquote {
     border-left: 4px solid #B21313;
     padding: 10px;
     margin-top: 45px;
