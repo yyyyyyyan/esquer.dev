@@ -1,7 +1,23 @@
 {% extends "layout.html" %}
 
+{% block extendable_header %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static "css/static.css" %}">
+    <link rel="stylesheet" href="{% static "css/post.css" %}">
+{% endblock %}
+
 {% block title %}Contato{% endblock %}
 
 {% block content %}
-    <!-- TODO: contato -->
+    <h1 class="text-center title">Contato</h1>
+    <div class="post-body post-div">
+        <p>Gostou de uma postagem e quer compartilhar seus pensamentos comigo? Quer tirar uma dúvida? Bater um papo? Nessa página eu te explico as melhores formas de entrar em contato comigo!</p>
+        <h2>Twitter</h2>
+        <p><a href="https://twitter.com/esquerdev">@esquerdev</a></p>
+        <h2>Email</h2>
+        <p>{{ "contato@esquer.dev"|urlize }}</p>
+        <h2>Email criptografado</h2>
+        <p>{{ "gpg@esquer.dev"|urlize }}</p>
+        <p>Use a seguinte chave pública:</p>
+    </div>
 {% endblock %}

@@ -1,11 +1,16 @@
 {% extends "layout.html" %}
 
+{% block extendable_header %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static "css/static.css" %}">
+    <link rel="stylesheet" href="{% static "css/post.css" %}">
+{% endblock %}
+
 {% block title %}Política de Privacidade{% endblock %}
 
 {% block content %}
-    <div class="post-div">
-        <h1 class="post-title">Política de Privacidade para esquer.dev</h1>
-        <p>04/12/2019</p>
+    <div class="post-div post-body">
+        <h1 class="text-center title">Política de Privacidade para esquer.dev</h1>
         <p>A equipe do esquer.dev ("Nós", "Nosso") opera o website esquer.dev (o "Serviço").</p>
         <p>Esta página tem o propósito de informar você sobre nossas políticas relacionadas à sua privacidade (coleta, uso e divulgação de dados pessoais) de quando você usa nosso Serviço.</p>
         <p>O esquer.dev não tem pretensão de coletar nenhum dado além do necessário para a manutenção e segurança do próprio Serviço.</p>
@@ -19,7 +24,7 @@
             <li>Data e horário da requisição</li>
         </ul>
         <p>Os dados coletados por Nós são utilizados apenas para manutenção e segurança do Serviço. Nenhuma informação coletada será compartilhada com terceiros, a não ser que haja por uma requisição legal que possa por em perigo a manutenção do Serviço.</p>
-        <p>Os registros dos dados coletados por Nós são removidos do servidor do esquer.dev após uma semana da coleta. Nós podemos aumentar ou diminuir esse período de tempo de acordo com razões materiais que possam chegar a Nós. O que constitui uma razão material será determinado a nosso exclusivo critério.</p>
+        <p>Os registros dos dados coletados por Nós são removidos do servidor do esquer.dev após uma semana da coleta. Nós podemos aumentar ou diminuir esse período de tempo de acordo com razões materiais que possam chegar a Nós. O que constitui uma razão material será determinado a Nosso exclusivo critério.</p>
         <h2>Links Para Outros Websites</h2>
         <p>Nosso Serviço pode conter links para sites ou serviços de terceiros que não pertencem ou são controlados pela equipe do esquer.dev.</p>
         <p>A equipe do esquer.dev não tem controle e não assume nenhuma responsabilidade pelo conteúdo, políticas de privacidade ou práticas de sites ou serviços de terceiros. Você também reconhece e concorda que o esquer.dev não será responsável, direta ou indiretamente, por qualquer dano ou perda causada ou supostamente causada por ou em conexão com o uso ou confiança em qualquer conteúdo, bens ou serviços disponíveis em ou através de quaisquer sites ou serviços externos ao Nosso.</p>
@@ -29,5 +34,6 @@
         <p>Ao continuar a acessar ou usar nosso Serviço após a efetivação dessas revisões, você concorda em ficar vinculado aos termos revisados. Se você não concordar com os novos termos, por favor, pare de usar o Serviço.</p>
         <h2>Entre em Contato</h2>
         <p>Se você tem alguma dúvida a respeito destas políticas, por favor, <a href="{% url "contact" %}">entre em contato conosco</a>.</p>
+        <img src="{% static "logo.png" %}" alt="esquer.dev logo">
     </div>
 {% endblock %}
