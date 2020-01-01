@@ -106,8 +106,3 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 from .local_settings import *
-
-# TODO: Work on SEO
-# TODO: transurl
-# TODO: change url of admin (token sera se rola com autenticador de app)
-# TODO: pagina de erro 404
