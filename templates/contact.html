@@ -13,8 +13,24 @@
     <div class="post-body post-div">
         <p>Gostou de uma postagem e quer compartilhar seus pensamentos comigo? Quer tirar uma dúvida? Bater um papo? Nessa página eu te explico as melhores formas de entrar em contato comigo!</p>
         <h2>Twitter</h2>
-        <p><a href="https://twitter.com/esquerdev">@esquerdev</a></p>
+        <p><a href="https://twitter.com/esquerdev" target="_blank">@esquerdev</a></p>
         <h2>Email</h2>
         <p>{{ "contato@esquer.dev"|urlize }}</p>
+        <p>Para garantir a segurança da sua mensagem, você pode criptografar seu email usando minha chave pública GPG. Para isso, faça o <a href="{% static "esquerdev-public-key.asc" %}" download>download da chave</a> ou copie o conteúdo dela a seguir:</p>
+        <pre><code>
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+mDMEXhvGFxYJKwYBBAHaRw8BAQdAuiBPwWqadzCAeWGBS1X0LGX5NxwxSqCy2NIG
+pFnbvs+0Hnl5eXl5eXlhbiA8Y29udGF0b0Blc3F1ZXIuZGV2PoiUBBMWCAA8FiEE
+zLk+nT2Hhesrz2Q6RL2Zbu9lA1UFAl4bxhcCGwMFCQlmAYAFCwkIBwIGFQoJCAsC
+AhYAAh4BAheAAAoJEES9mW7vZQNVxK4A/0m6WXXJnvesTx0e4v6V66OZFawNyJhW
+hcDHiqQEEHU8AQDAh/DJX/8Bebyo0999PBA4K1r1KxoiTdQ5pcpDVF6YBLg4BF4b
+xhcSCisGAQQBl1UBBQEBB0A8lNZj4J04Q2mJSojD2+umKpNnTH5LH+6Qw//FBE3F
+GwMBCAeIfgQYFggAJhYhBMy5Pp09h4XrK89kOkS9mW7vZQNVBQJeG8YXAhsMBQkJ
+ZgGAAAoJEES9mW7vZQNV25ABAJJSQ4Sg26P+S/2FJdVzfWLfad7kvy2e8IXH0S7l
+tPSCAQDB3tiSo6kEsFJ8WuqFAQE+X/hyDoEhcpdq0mCgx0T5AQ==
+=YNBq
+-----END PGP PUBLIC KEY BLOCK-----
+        </code></pre>
     </div>
 {% endblock %}
