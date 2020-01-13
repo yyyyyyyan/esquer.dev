@@ -1,11 +1,16 @@
 {% extends "layout.html" %}
 
+{% block extendable_header %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static "css/static.css" %}">
+    <link rel="stylesheet" href="{% static "css/post.css" %}">
+{% endblock %}
+
 {% block title %}Termos e Condições de Uso{% endblock %}
 
 {% block content %}
-    <div class="post-div">
-        <h1 class="post-title">Termos e Condições</h1>
-        <p>04/12/2019</p>
+    <div class="post-div post-body">
+        <h1 class="text-center title">Termos e Condições</h1>
         <p>Por favor, leia estes Termos e Condições ("Termos") com atenção antes de acessar o website esquer.dev (o "Serviço") operado pela equipe do esquer.dev ("Nós", "Nosso").</p>
         <p>Seu acesso e uso desse Serviço é condicionado à sua aceitação e concordância aos Termos aqui descritos. Tais Termos se aplicam a todos os visitantes, usuários e outros que acessem ou usem o Serviço.</p>
         <p>Ao acessar ou usar o Serviço, você concorda em seguir estes Termos. Se você discorda de qualquer parte dos Termos, você não deve acessar o Serviço.</p>
