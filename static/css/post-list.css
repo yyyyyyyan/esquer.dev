@@ -37,6 +37,7 @@
     font-family: 'Quantico', sans-serif;
     font-size: 46px;
     color: #B21313;
+    word-break: break-word;
 }
 
 .post-pagination {

@@ -1,5 +1,6 @@
 .title {
     font-family: 'Quantico', sans-serif;
-    font-size: 72px;
+    font-size: 64px;
+    word-break: break-word;
     color: #B21313;
 }
