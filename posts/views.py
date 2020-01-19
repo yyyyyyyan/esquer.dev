@@ -1,3 +1,4 @@
+from django.utils import timezone
 from django.views.generic import ListView, DetailView
 from .models import Post
 
@@ -6,6 +7,10 @@ class PostDetail(DetailView):
     template_name = 'posts/post.html'
     context_object_name = 'post'
     model = Post
+
+    def get_queryset(self):
+        queryset = super(PostDetail, self).get_queryset().filter(pub_date__lte=timezone.now())
+        return queryset
 
     def get_object(self, *args, **kwargs):
         post_object = super(PostDetail, self).get_object(*args, **kwargs)
@@ -20,10 +25,14 @@ class PostList(ListView):
     ordering = '-pub_date'
     paginate_by = 7
 
+    def get_queryset(self):
+        queryset = self.model.objects.filter(pub_date__lte=timezone.now()).order_by(self.ordering)
+        return queryset
+
 
 class PostListByTag(PostList):
     def get_queryset(self):
-        queryset = self.model.objects.filter(keywords__icontains=self.kwargs['keyword']).order_by(self.ordering)
+        queryset = super(PostListByTag, self).get_queryset().filter(keywords__icontains=self.kwargs['keyword'])
         return queryset
     
     def get_context_data(self, *args, **kwargs):
