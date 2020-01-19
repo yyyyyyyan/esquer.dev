@@ -50,6 +50,12 @@
     font-weight: bold;
 }
 
+.post-body h3 {
+    margin-top: 30px;
+    font-size: 23px;
+    font-weight: bold;
+}
+
 .post-body a{
     color: #B21313;
     font-weight: bold;
