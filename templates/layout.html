@@ -6,8 +6,13 @@
     <meta name="keywords" content="{% block keywords %}Privacidade,Criptografia,Hacking,Comunismo,Tecnologia,Segurança{% endblock %}">
     <meta name="author" content="{% block author %}esquer.dev{% endblock %}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- TODO: SEO tags -->
+    <meta name="twitter:card" value="summary">
+    <meta name="twitter:site" content="@esquerdev">
+    <meta name="twitter:title" content="{% block twitter_title %}Home{% endblock %}">
+    <meta name="twitter:description" content="{% block twitter_description %}Um blog de tecnologia e política à esquerda{% endblock %}">
+    <meta name="twitter:creator" content="@yyyyyyyan_">
     {% load static %}
+    <meta name="twitter:image" content="{% static "logo.png" %}">
     <link rel="apple-touch-icon" sizes="180x180" href="{% static "favicon/apple-touch-icon.png" %}">
     <link rel="icon" type="image/png" sizes="32x32" href="{% static "favicon/favicon-32x32.png" %}">
     <link rel="icon" type="image/png" sizes="16x16" href="{% static "favicon/favicon-16x16.png" %}">

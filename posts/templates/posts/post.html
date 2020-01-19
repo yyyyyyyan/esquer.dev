@@ -4,6 +4,9 @@
 
 {% block keywords %}{{ post.keywords }}{% endblock %}
 
+{% block twitter_title %}{{ post.title }}{% endblock %}
+{% block twitter_description %}{{ post.description }}{% endblock %}
+
 {% block extendable_header %}
     {% load static %}
     <link rel="stylesheet" href="{% static "css/post.css" %}">
