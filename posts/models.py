@@ -13,6 +13,6 @@ class Post(models.Model):
     has_code = models.BooleanField(editable=False)
 
     def save(self, *args, **kwargs):
-        self.readtime = readtime.of_markdown(self.markdown).minutes
+        self.readtime = readtime.of_markdown(self.markdown, wpm=250).minutes
         self.has_code = "```" in self.markdown
         super(Post, self).save(*args, **kwargs)
