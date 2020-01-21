@@ -1,5 +1,49 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="{% block description %}Um blog de tecnologia e política à esquerda{% endblock %}">
+    <meta name="keywords" content="{% block keywords %}Privacidade,Criptografia,Hacking,Comunismo,Tecnologia,Segurança{% endblock %}">
+    <meta name="author" content="{% block author %}esquer.dev{% endblock %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google / Search Engine Tags -->
+    <meta itemprop="name" content="{% block google_title %}Home{% endblock %} | esquer.dev">
+    <meta itemprop="description" content="{% block google_description %}Um blog de tecnologia e política à esquerda{% endblock %}">
+    <meta itemprop="image" content="https://esquer.dev/static/logo.png">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://esquer.dev/posts">
+    <meta property="og:type" content="{% block facebook_type %}article{% endblock %}">
+    <meta property="og:title" content="{% block facebook_title %}Home{% endblock %} | esquer.dev">
+    <meta property="og:description" content="{% block facebook_description %}Um blog de tecnologia e política à esquerda{% endblock %}">
+    <meta property="og:image" content="https://esquer.dev/static/logo.png">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{% block twitter_title %}Home{% endblock %} | esquer.dev">
+    <meta name="twitter:description" content="{% block twitter_description %}Um blog de tecnologia e política à esquerda{% endblock %}">
+    <meta name="twitter:image" content="https://esquer.dev/static/logo.png">
+    <meta name="twitter:site" content="@esquer_dev">
+    <meta name="twitter:creator" content="@yyyyyyyan_">
+
+    {% load static %}
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static "favicon/apple-touch-icon.png" %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static "favicon/favicon-32x32.png" %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static "favicon/favicon-16x16.png" %}">
+    <link rel="manifest" href="{% static "favicon/site.webmanifest" %}">
+    <link rel="shortcut icon" href="{% static "favicon/favicon.ico" %}">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="{% static "favicon/browserconfig.xml" %}">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/logo-font/stylesheet.css" %}">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans|Quantico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static "css/esquerdev.css" %}">
+    {% block extendable_header %}{% endblock %}
+    <title>{% block title %}Home{% endblock %} | esquer.dev</title>
+</head>
 <body>
     <nav class="navbar sticky-top navbar-expand-lg esquerdev-navbar">
         <div class="container">
@@ -46,48 +90,4 @@
         </div>
     </footer>
 </body>
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="{% block description %}Um blog de tecnologia e política à esquerda{% endblock %}">
-    <meta name="keywords" content="{% block keywords %}Privacidade,Criptografia,Hacking,Comunismo,Tecnologia,Segurança{% endblock %}">
-    <meta name="author" content="{% block author %}esquer.dev{% endblock %}">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Google / Search Engine Tags -->
-    <meta itemprop="name" content="{% block google_title %}Home{% endblock %} | esquer.dev">
-    <meta itemprop="description" content="{% block google_description %}Um blog de tecnologia e política à esquerda{% endblock %}">
-    <meta itemprop="image" content="https://esquer.dev/static/logo.png">
-
-    <!-- Facebook Meta Tags -->
-    <meta property="og:url" content="https://esquer.dev/posts">
-    <meta property="og:type" content="{% block facebook_type %}article{% endblock %}">
-    <meta property="og:title" content="{% block facebook_title %}Home{% endblock %} | esquer.dev">
-    <meta property="og:description" content="{% block facebook_description %}Um blog de tecnologia e política à esquerda{% endblock %}">
-    <meta property="og:image" content="https://esquer.dev/static/logo.png">
-
-    <!-- Twitter Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="{% block twitter_title %}Home{% endblock %} | esquer.dev">
-    <meta name="twitter:description" content="{% block twitter_description %}Um blog de tecnologia e política à esquerda{% endblock %}">
-    <meta name="twitter:image" content="https://esquer.dev/static/logo.png">
-    <meta name="twitter:site" content="@esquer_dev">
-    <meta name="twitter:creator" content="@yyyyyyyan_">
-
-    {% load static %}
-    <link rel="apple-touch-icon" sizes="180x180" href="{% static "favicon/apple-touch-icon.png" %}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{% static "favicon/favicon-32x32.png" %}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{% static "favicon/favicon-16x16.png" %}">
-    <link rel="manifest" href="{% static "favicon/site.webmanifest" %}">
-    <link rel="shortcut icon" href="{% static "favicon/favicon.ico" %}">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-config" content="{% static "favicon/browserconfig.xml" %}">
-    <meta name="theme-color" content="#ffffff">
-
-    <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}">
-    <link rel="stylesheet" href="{% static "css/logo-font/stylesheet.css" %}">
-    <link href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans|Quantico&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{% static "css/esquerdev.css" %}">
-    {% block extendable_header %}{% endblock %}
-    <title>{% block title %}Home{% endblock %} | esquer.dev</title>
-</head>
 </html>
