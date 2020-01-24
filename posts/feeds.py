@@ -5,7 +5,7 @@ from .models import Post
 
 class PostsFeed(Feed):
     title = "esquer.dev"
-    link = "/posts/"
+    link = "https://esquer.dev/posts/"
     description = "Um blog de tecnologia e política à esquerda."
     item_author_name = "yyyyyyyan"
     item_author_email = "contato@esquer.dev"
