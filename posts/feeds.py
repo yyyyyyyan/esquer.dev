@@ -1,5 +1,4 @@
 from django.contrib.syndication.views import Feed
-from django.urls import reverse
 from django.utils import timezone
 from .models import Post
 
@@ -22,7 +21,7 @@ class PostsFeed(Feed):
         return item.description
 
     def item_link(self, item):
-        return reverse("post_detail", args=[item.slug])
+        return "https://esquer.dev/posts/" + item.slug
 
     def item_categories(self, item):
         return item.keywords.split(",")
