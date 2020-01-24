@@ -10,6 +10,7 @@ class PostsFeed(Feed):
     item_author_name = "yyyyyyyan"
     item_author_email = "contato@esquer.dev"
     item_author_link = "https://twitter.com/yyyyyyyan_"
+    feed_url = "https://esquer.dev/posts/feed/"
 
     def items(self):
         return Post.objects.order_by("-pub_date")
