@@ -64,8 +64,8 @@
     fill: #000000;
 }
 
-.onion-link:hover .onion-svg {
-    fill: #7d4698;
+.rss-link:hover .rss-svg {
+    fill: #FF9800;
 }
 
 small {
