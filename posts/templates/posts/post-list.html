@@ -29,7 +29,7 @@
 
 {% block content %}
     {% if keyword %}
-        <h1 class="tag-title">#{{ keyword|capfirst }}</h1>
+        <h1 class="tag-title">#{{ keyword|title }}</h1>
     {% endif %}
     {% load markdown %}
     {% for post in posts %}

@@ -52,9 +52,9 @@
                 <span class="esquer written-logo">esquer.</span><span class="written-logo">dev</span>
             </a>
             <div class="navbar-nav mr-5 nav-pages">
-                <a href="{% url "post_list" %}" class="nav-item nav-link esquerdev-nav-item {% if request.path == "/posts" %}esquerdev-nav-item-active{% endif %}">Posts</a>
-                <a href="{% url "about" %}" class="nav-item nav-link esquerdev-nav-item {% if request.path == "/sobre" %}esquerdev-nav-item-active{% endif %}">Sobre</a>
-                <a href="{% url "contact" %}" class="nav-item nav-link esquerdev-nav-item {% if request.path == "/contato" %}esquerdev-nav-item-active{% endif %}">Contato</a>
+                <a href="{% url "post_list" %}" class="nav-item nav-link esquerdev-nav-item {% if request.path == "/posts/" %}esquerdev-nav-item-active{% endif %}">Posts</a>
+                <a href="{% url "about" %}" class="nav-item nav-link esquerdev-nav-item {% if request.path == "/sobre/" %}esquerdev-nav-item-active{% endif %}">Sobre</a>
+                <a href="{% url "contact" %}" class="nav-item nav-link esquerdev-nav-item {% if request.path == "/contato/" %}esquerdev-nav-item-active{% endif %}">Contato</a>
             </div>
         </div>
     </nav>

@@ -13,7 +13,7 @@ class PostsFeed(Feed):
     feed_url = "https://esquer.dev/posts/feed/"
 
     def items(self):
-        return Post.objects.order_by("-pub_date")
+        return Post.objects.filter(pub_date__lte=timezone.now()).order_by("-pub_date")
 
     def item_title(self, item):
         return item.title
