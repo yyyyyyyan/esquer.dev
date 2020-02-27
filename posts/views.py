@@ -1,3 +1,4 @@
+from django.shortcuts import get_object_or_404
 from django.utils import timezone
 from django.views.generic import ListView, DetailView
 from .models import Post
@@ -13,7 +14,11 @@ class PostDetail(DetailView):
         return queryset
 
     def get_object(self, *args, **kwargs):
-        post_object = super(PostDetail, self).get_object(*args, **kwargs)
+        key = self.request.GET.get("key")
+        if key:
+            post_object = get_object_or_404(self.model, slug=self.kwargs["slug"], lock_key=key)
+        else:
+            post_object = super(PostDetail, self).get_object(*args, **kwargs)
         post_object.list_keywords = post_object.keywords.split(',')
         return post_object
 
