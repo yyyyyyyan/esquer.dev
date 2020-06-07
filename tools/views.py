@@ -9,8 +9,8 @@ import os
 import subprocess
 
 
-@ratelimit(key="ip", rate="10/m", method=["GET", "HEAD", "OPTIONS", "CONNECT", "TRACE"])
-@ratelimit(key="ip", rate="10/h", method=UNSAFE_METHODS, block=True)
+@ratelimit(key="header:X-Real-IP", rate="10/m", method=["GET", "HEAD", "OPTIONS", "CONNECT", "TRACE"])
+@ratelimit(key="header:X-Real-IP", rate="10/h", method=UNSAFE_METHODS, block=True)
 def remove_metadata(request):
     if request.method == "POST":
         form = MetadataRemovalForm(request.POST, request.FILES)

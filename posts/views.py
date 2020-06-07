@@ -7,7 +7,7 @@ from .models import Post
 
 
 class PostDetail(RatelimitMixin, DetailView):
-    ratelimit_key = "ip"
+    ratelimit_key = "header:X-Real-IP"
     ratelimit_rate = "10/m"
     ratelimit_method = ALL_METHODS
 
@@ -30,7 +30,7 @@ class PostDetail(RatelimitMixin, DetailView):
 
 
 class PostList(RatelimitMixin, ListView):
-    ratelimit_key = "ip"
+    ratelimit_key = "header:X-Real-IP"
     ratelimit_rate = "10/m"
     ratelimit_method = ALL_METHODS
 
