@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block google_title %}Removedor de metadados{% endblock %}
+{% block facebook_title %}Removedor de metadados{% endblock %}
+{% block twitter_title %}Removedor de metadados{% endblock %}
+
+{% block extendable_header %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static "css/static.css" %}">
+    <link rel="stylesheet" href="{% static "css/post.css" %}">
+{% endblock %}
+
+{% block title %}Removedor de metadados{% endblock %}
+
+{% block content %}
+    <h1 class="title text-center">Removedor de metadados</h1>
+    <div class="post-body post-div">
+        <p>{{ form.file_to_clean.errors }}</p>
+        <form action="{% url "metadata-removal" %}" enctype="multipart/form-data" method="POST" style="margin-top: 0px;">
+            {% csrf_token %}
+            <p>{{ form.file_to_clean }}</p>
+            <p><input type="submit" value="Remover metadados"></p>
+        </form>
+{#        <p>Essa página lista as ferramentas disponibilizadas pelo <strong>esquer.dev</strong>. A ideia é que vá aumentando com o tempo, de acordo com o contexto de cada postagem ;)!</p>#}
+{#        <a href="removedor-metadados"><h2>Removedor de metadados</h2></a>#}
+{#        <p>O removedor de metadados do <strong>esquer.dev</strong> nada mais é do que uma interface para a ferramenta <a href="https://0xacab.org/jvoisin/mat2">mat2</a> - um programa de linha de comando para remoção de metadados de diferentes tipos de arquivos, escrito em Python 3.</p>#}
+{#        <p>Como nem todos podem nem querem instalar o programa em seus computadores, a ferramenta no <strong>esquer.dev</strong> executa o <strong>mat2</strong> dentro de nosso servidor. Isso significa que seu arquivo passa dentro de nosso servidor por um instante, enquanto fazemos a remoção de metadados, mas não se preocupe - <strong>nenhum dado é lido ou armazenado por nós</strong>. Só fazemos a limpeza e depois te mandamos de volta!</p>#}
+{#        <p>O removedor de metadados foi apresentado na postagem <a href="https://esquer.dev/posts/como-protestar-com-seguranca-digital">Como protestar com segurança (digital)</a>.</p>#}
+        {% load static %}
+        <img src="{% static "logo.png" %}" alt="esquer.dev logo">
+    </div>
+{% endblock %}

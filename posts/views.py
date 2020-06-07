@@ -1,10 +1,16 @@
 from django.shortcuts import get_object_or_404
 from django.utils import timezone
 from django.views.generic import ListView, DetailView
+from ratelimit.mixins import RatelimitMixin
+from ratelimit import ALL as ALL_METHODS
 from .models import Post
 
 
-class PostDetail(DetailView):
+class PostDetail(RatelimitMixin, DetailView):
+    ratelimit_key = "ip"
+    ratelimit_rate = "10/m"
+    ratelimit_method = ALL_METHODS
+
     template_name = 'posts/post.html'
     context_object_name = 'post'
     model = Post
@@ -23,7 +29,11 @@ class PostDetail(DetailView):
         return post_object
 
 
-class PostList(ListView):
+class PostList(RatelimitMixin, ListView):
+    ratelimit_key = "ip"
+    ratelimit_rate = "10/m"
+    ratelimit_method = ALL_METHODS
+
     template_name = 'posts/post-list.html'
     context_object_name = 'posts'
     model = Post
