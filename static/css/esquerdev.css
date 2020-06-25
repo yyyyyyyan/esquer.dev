@@ -51,9 +51,12 @@
 }
 
 .nav-external-svg {
-    margin-right: 20px;
     fill: #B21313;
     transition: fill 0.2s;
+}
+
+.esquerdev-nav-link {
+    margin-right: 20px;
 }
 
 .twitter-link:hover .twitter-svg {
