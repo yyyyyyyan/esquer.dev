@@ -37,7 +37,8 @@
     font-family: 'Quantico', sans-serif;
     font-size: 46px;
     color: #B21313;
-    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
 }
 
 .post-pagination {
@@ -51,4 +52,6 @@
 
 .post-keywords {
     font-size: 15px;
+    overflow-wrap: break-word;
+    hyphens: auto;
 }
