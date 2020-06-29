@@ -25,7 +25,7 @@ class PostDetail(RatelimitMixin, DetailView):
             post_object = get_object_or_404(self.model, slug=self.kwargs["slug"], lock_key=key)
         else:
             post_object = super(PostDetail, self).get_object(*args, **kwargs)
-        post_object.list_keywords = post_object.keywords.split(',')
+        post_object.list_keywords = post_object.keywords.split(', ')
         return post_object
 
 
