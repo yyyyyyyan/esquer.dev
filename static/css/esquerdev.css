@@ -118,3 +118,9 @@ footer {
         display: none;
     }
 }
+
+.error {
+    font-family: 'Quantico', sans-serif;
+    color: #B21313;
+    font-size: 72px;
+}
