@@ -47,7 +47,10 @@
     <nav class="navbar sticky-top navbar-expand-lg esquerdev-navbar">
         <div class="container">
             <a href="{% url "index" %}" class="navbar-brand esquerdev-brand mx-auto">
-            <img src="{% static "transparent-logo.png" %}" alt="esquer.dev logo" id="nav-logo">
+            <img srcset="{% static "transparent-logo-50x50.png" %} 50w,{% static "transparent-logo-70x70.png" %} 70w"
+                 sizes="(max-width: 600px) 50px, 70px"
+                 src="{% static "transparent-logo-70x70.png" %}"
+                 alt="esquer.dev logo" id="nav-logo">
                 <span class="esquer written-logo">esquer.</span><span class="written-logo">dev</span>
             </a>
             <div class="navbar-nav mr-5 nav-pages">
