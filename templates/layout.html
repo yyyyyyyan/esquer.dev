@@ -55,7 +55,7 @@
             </a>
             <div class="navbar-nav mr-5 nav-pages">
                 <!-- TODO: Adicionar link para Ferramentas sem bugar o layout -->
-                <a href="{% url "post_list" %}" class="nav-item nav-link esquerdev-nav-item {% if request.path == "/posts/" %}esquerdev-nav-item-active{% endif %}">Posts</a>
+                <a href="{% url "post_list" %}" class="nav-item nav-link esquerdev-nav-item {% if request.path == "/" %}esquerdev-nav-item-active{% endif %}">Posts</a>
                 <a href="{% url "about" %}" class="nav-item nav-link esquerdev-nav-item {% if request.path == "/sobre/" %}esquerdev-nav-item-active{% endif %}">Sobre</a>
                 <a href="{% url "contact" %}" class="nav-item nav-link esquerdev-nav-item {% if request.path == "/contato/" %}esquerdev-nav-item-active{% endif %}">Contato</a>
             </div>
