@@ -1,6 +1,6 @@
 
 
-<p style="text-align: center;"<a href="https://esquer.dev"><img height="500px" width="500px" src="https://raw.githubusercontent.com/yyyyyyyan/esquer.dev/master/static/logo.png"></a></p>
+<p align="center"><a href="https://esquer.dev"><img height="500px" width="500px" src="https://raw.githubusercontent.com/yyyyyyyan/esquer.dev/master/static/logo.png"></a></p>
 
 <h2 align="center">Um blog comunista sobre tecnologia</h2>
 
