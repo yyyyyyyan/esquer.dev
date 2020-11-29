@@ -1,7 +1,8 @@
 from django import forms
 from django.core.validators import FileExtensionValidator
-from upload_validator import FileTypeValidator
 from django_clamd.validators import validate_file_infection
+from upload_validator import FileTypeValidator
+
 from .validators import FileSizeValidator
 
 allowed_types = [
@@ -101,7 +102,7 @@ class MetadataRemovalForm(forms.Form):
         max_length=100,
         allow_empty_file=True,
         validators=[
-            FileSizeValidator(max_size=(1024*1024)*25),
+            FileSizeValidator(max_size=(1024 * 1024) * 25),
             validate_file_infection,
             FileExtensionValidator(allowed_extensions=allowed_extensions),
             FileTypeValidator(allowed_types=allowed_types),
