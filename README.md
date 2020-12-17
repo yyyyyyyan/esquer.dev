@@ -4,7 +4,7 @@
 
 <h2 align="center">Um blog comunista sobre tecnologia</h2>
 
-
+ssssss
 
 <p align="center">
 <a href="https://hstspreload.org/?domain=esquer.dev"><img alt="Chromium HSTS preload" src="https://img.shields.io/hsts/preload/esquer.dev"></a>
