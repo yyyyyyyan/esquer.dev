@@ -15,9 +15,9 @@
 {% block extendable_header %}
     {% load static %}
     <link rel="stylesheet" href="{% static "css/post.css" %}">
-{#    {% if post.has_code %}#}
-{# TODO: add code highlight without js (consider https://github.com/soulshined/ft-syntax-highlight or pygments) #}
-{#    {% endif %}#}
+    {% if post.has_code %}
+        <link rel="stylesheet" href="{% static "css/code.css" %}">
+    {% endif %}
 {% endblock %}
 
 {% block title %}{{ post.title }}{% endblock %}
