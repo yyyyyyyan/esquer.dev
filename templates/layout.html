@@ -66,11 +66,13 @@
         <div class="small-footer">
             <small>
                 <p class="text-center">
-                        &copy; Copyright {% now "Y" %}, esquer.dev
-                        &bull;
-                        <a href="{% url "privacy" %}" class="footer-link">Política de Privacidade</a>
-                        &bull;
-                        <a href="{% url "terms" %}" class="footer-link">Termos de Uso</a>
+                    <a target="_blank" rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/deed.pt_BR"><!--
+                        --><img src="{% static "license.png" %}" style="border-style: none;" alt="CC0"><!--
+                    --></a>
+                    &bull;
+                    <a href="{% url "privacy" %}" class="footer-link">Política de Privacidade</a>
+                    &bull;
+                    <a href="{% url "terms" %}" class="footer-link">Termos de Uso</a>
                 </p>
                 <p class="text-center mobile-nav">
                     <a href="{% url "post_list" %}">Posts</a>
